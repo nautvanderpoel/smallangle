@@ -7,14 +7,13 @@ import pandas as pd
 def cmd_group():
     pass
 
+
+@cmd_group.command()
 @click.option(
     "-n",
     "--number",
     default=1,
 )
-
-@cmd_group.command()
-@click.argument("number")
 def sin(number):
     x = np.linspace(0, 2 * pi, number)
     df = pd.DataFrame({"x": x, "sin (x)": np.sin(x)})
