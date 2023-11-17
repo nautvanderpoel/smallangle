@@ -19,13 +19,13 @@ def sin(number):
     """Calculates the tangent with arguments between [0,2pi] with 'number' as stepsize
 
     Args:
-        number (integer): "Values within the range [0,2pi]"
+        number (integer): "Stepsize of domain [0,2pi]"
     """
 
     x = np.linspace(0, 2 * pi, number)
     df = pd.DataFrame({"x": x, "sin (x)": np.sin(x)})
     print(df)
-    return 
+     
 
 @cmd_group.command()
 @click.option(
@@ -42,7 +42,7 @@ def tan(number):
     x = np.linspace(0, 2 * pi, number)
     df = pd.DataFrame({"x": x, "tan (x)": np.tan(x)})
     print(df)
-    return
+    
 
 
 if __name__ == "__main__":
